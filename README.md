@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist kroshilin/yii2-yandex-kassa "*"
+php composer.phar require --prefer-dist ar2rsoft/yii2-yandex-kassa "*"
 ```
 
 or add
 
 ```
-"kroshilin/yii2-yandex-kassa": "*"
+"ar2rsoft/yii2-yandex-kassa": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,7 +30,7 @@ First, add extension under the components section of your config.php
 'components' => [
 	...
 	'yakassa' => [
-		'class' => 'kroshilin\yakassa\YaKassa',
+		'class' => 'ar2rsoft\yakassa\YaKassa',
 		'paymentAction' => YII_DEBUG ? 'https://demomoney.yandex.ru/eshop.xml' : 'https://money.yandex.ru/eshop.xml',
 		'shopPassword' => 'password',
 		'securityType' => 'MD5',
@@ -93,7 +93,7 @@ Using widget is simple. You have to implement 2 interfaces. First is OrderInterf
 Second is Customer interface, to pass customer id and pre-fill phone and email if exist.
 
 ```
-echo kroshilin\yakassa\widgets\Payment::widget([
+echo ar2rsoft\yakassa\widgets\Payment::widget([
     'order' => $order,
     'userIdentity' => Yii::$app->user->identity,
 	'data' => ['customParam' => 'value'],
