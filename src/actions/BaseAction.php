@@ -63,7 +63,7 @@ class BaseAction extends Action
             if (!$this->beforeResponse) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             }
-            if (call_user_func($this->beforeResponse, Yii::$app->request) and !$this->getComponent()->disableErrors) {
+            if (call_user_func($this->beforeResponse, Yii::$app->request) or $this->getComponent()->disableErrors) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             } else {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 100);
