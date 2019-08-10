@@ -1,21 +1,21 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: krosh
- * Date: 26.04.2016
- * Time: 12:27
+ * User: ar2r
+ * Date: 10.08.2019
+ * Time: 11:09
  */
 
-namespace kroshilin\yakassa\models;
+namespace ar2rsoft\yakassa\models;
 
 use yii\base\Model;
 use Yii;
 
 /**
  * Class BaseModel
- * @package kroshilin\yakassa\models
+ * @package ar2rsoft\yakassa\models
  *
- * @property \kroshilin\yakassa\YaKassa $component
+ * @property \ar2rsoft\yakassa\YaKassa $component
  */
 
 class BaseModel extends Model
@@ -26,7 +26,7 @@ class BaseModel extends Model
     public $component = 'yakassa';
 
     /**
-     * @return \kroshilin\yakassa\YaKassa;
+     * @return \ar2rsoft\yakassa\YaKassa;
      */
     public function getComponent()
     {

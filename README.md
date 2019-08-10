@@ -36,7 +36,8 @@ First, add extension under the components section of your config.php
 		'securityType' => 'MD5',
 		'shopId' => '12345',
 		'scId' => '123',
-		'currency' => '10643'
+		'currency' => '10643',
+		'disableErrors' => true, # disable any error codes for yandex callback
 	]
 	...
 ]
@@ -99,5 +100,6 @@ echo kroshilin\yakassa\widgets\Payment::widget([
 	'paymentType' => ['PC' => 'Со счета в Яндекс.Деньгах', 'AC' => 'С банковской карты']
 ]);
 ```
+
 
 

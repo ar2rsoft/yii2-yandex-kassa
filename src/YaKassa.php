@@ -1,11 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: krosh
- * Date: 25.04.2016
- * Time: 21:20
+ * User: ar2r
+ * Date: 10.08.2019
+ * Time: 11:09
  */
-namespace kroshilin\yakassa;
+
+namespace ar2rsoft\yakassa;
 
 use yii\base\Component;
 
@@ -28,6 +29,7 @@ class YaKassa extends Component
     public $mwsPrivateKey;
     public $mwsCertPassword;
     public $paymentAction;
+    public $disableErrors = false; // Отключаем отдачу ошибок яндексу в колбеке
 
     /**
      * @var string

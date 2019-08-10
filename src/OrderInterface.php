@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: krosh
- * Date: 25.04.2016
- * Time: 21:17
+ * User: ar2r
+ * Date: 10.08.2019
+ * Time: 11:09
  */
 
-namespace kroshilin\yakassa;
+namespace ar2rsoft\yakassa;
 
 interface OrderInterface
 {

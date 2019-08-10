@@ -1,23 +1,23 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: krosh
- * Date: 26.04.2016
+ * User: ar2r
+ * Date: 10.08.2019
  * Time: 11:09
  */
 
-namespace kroshilin\yakassa\actions;
+namespace ar2rsoft\yakassa\actions;
 
-use kroshilin\yakassa\models\MD5;
-use kroshilin\yakassa\YaKassa;
+use ar2rsoft\yakassa\models\MD5;
+use ar2rsoft\yakassa\YaKassa;
 use yii\base\Action;
 use Yii;
 
 /**
  * Class BaseAction
- * @package kroshilin\yakassa\actions
+ * @package ar2rsoft\yakassa\actions
  *
- * @property \kroshilin\yakassa\YaKassa $component
+ * @property \ar2rsoft\yakassa\YaKassa $component
  */
 
 class BaseAction extends Action
@@ -57,13 +57,13 @@ class BaseAction extends Action
             $model = new MD5();
             $model->load(Yii::$app->request->post(), "");
             $model->validate();
-            if ($model->hasErrors()) {
+            if ($model->hasErrors() and !$this->getComponent()->disableErrors) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 1, Yii::t($this->getComponent()->messagesCategory, 'Wrong MD5 hash'));
             }
             if (!$this->beforeResponse) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             }
-            if (call_user_func($this->beforeResponse, Yii::$app->request)) {
+            if (call_user_func($this->beforeResponse, Yii::$app->request) and !$this->getComponent()->disableErrors) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             } else {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 100);
@@ -76,7 +76,7 @@ class BaseAction extends Action
     }
 
     /**
-     * @return \kroshilin\yakassa\YaKassa;
+     * @return \ar2rsoft\yakassa\YaKassa;
      */
     public function getComponent()
     {

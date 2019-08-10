@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: krosh
- * Date: 26.04.2016
+ * User: ar2r
+ * Date: 10.08.2019
  * Time: 11:09
  */
 
-namespace kroshilin\yakassa\actions;
+namespace ar2rsoft\yakassa\actions;
 
 use Yii;
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace kroshilin\yakassa\widgets;
+namespace ar2rsoft\yakassa\widgets;
 
-use kroshilin\yakassa\CustomerInterface;
-use kroshilin\yakassa\OrderInterface;
+use ar2rsoft\yakassa\CustomerInterface;
+use ar2rsoft\yakassa\OrderInterface;
 use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
 
 /**
  * Class Payment
- * @package kroshilin\yakassa\widgets
+ * @package ar2rsoft\yakassa\widgets
  *
- * @property \kroshilin\yakassa\YaKassa $component
+ * @property \ar2rsoft\yakassa\YaKassa $component
  */
 class Payment extends Widget
 {
@@ -67,7 +67,7 @@ class Payment extends Widget
     }
 
     /**
-     * @return \kroshilin\yakassa\YaKassa;
+     * @return \ar2rsoft\yakassa\YaKassa;
      */
     public function getComponent()
     {

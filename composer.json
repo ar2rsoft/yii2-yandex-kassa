@@ -1,13 +1,13 @@
 {
-    "name": "kroshilin/yii2-yandex-kassa",
+    "name": "ar2rsoft/yii2-yandex-kassa",
     "description": "Yandex kassa as Yii2 component",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","yandex","yandex-money","yandex-kassa"],
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Anton Kroshilin",
-            "email": "kroshilin.a@yandex.ru"
+            "name": "Artur Terbalyan",
+            "email": "ar2rsoft@gmail.com"
         }
     ],
     "require": {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kroshilin\\yakassa\\": "src/"
+            "ar2rsoft\\yakassa\\": "src/"
         }
     }
 }
