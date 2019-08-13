@@ -63,10 +63,10 @@ class BaseAction extends Action
             if (!$this->beforeResponse) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             }
-            if (call_user_func($this->beforeResponse, Yii::$app->request) or $this->getComponent()->disableErrors) {
+            if (call_user_func($this->beforeResponse, Yii::$app->request)) {
                 return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 0);
             } else {
-                return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, 100);
+                return $this->getComponent()->buildResponse($this->actionName, $model->invoiceId, $this->getComponent()->disableErrors ? 0 : 100);
             }
         } elseif ($this->component->securityType == YaKassa::SECURITY_PKCS7) {
             // TODO: write code for PKCS7
